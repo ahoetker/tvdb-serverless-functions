@@ -1,0 +1,10 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+functions:
+  tvdb-series-episodes:
+    lang: python3-fastapi
+    handler: ./tvdb-series-episodes
+    image: ahoetker/tvdb-series-episodes:latest
+

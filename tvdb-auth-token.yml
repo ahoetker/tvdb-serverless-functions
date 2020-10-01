@@ -1,0 +1,12 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+functions:
+  tvdb-auth-token:
+    lang: python3-fastapi
+    handler: ./tvdb-auth-token
+    image: ahoetker/tvdb-auth-token:latest
+    secrets:
+      - tvdb-apikey
+
